@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
+import SideBar from './components/SideBar/SideBar';
+import Profile from './components/Profile/Profile';
+import OrdersList from './components/OrdersList/OrdersList';
+
 function App() {
+
+const updateSellerDescription = () => {
+  console.log('ok');
+  
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <section className="App main_wrapper">
+      <SideBar />
+
+      <Route path='/profile' render={() => <Profile description = 'test descr' updateSellerDescription = { updateSellerDescription } />} />
+      <Route path='/orders' render={() => <OrdersList/>} />
+      </section>
+    </BrowserRouter>
   );
 }
 
