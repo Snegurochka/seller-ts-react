@@ -1,0 +1,15 @@
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    background: #3f4d67;
+    height: 100vh;
+    box-shadow: 1px 0 20px 0 #3f4d67;
+    z-index: 99;
+}
+
+.login-block {
+    padding: 24px;
+    color: #fff;
+}
