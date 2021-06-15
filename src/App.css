@@ -1,0 +1,13 @@
+body {
+  background: #f4f7fa;
+}
+
+.main_wrapper {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 235px 1fr;
+}
+
+.content_wrapper {
+  padding: 36px;
+}
