@@ -1,0 +1,21 @@
+.messages__body {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 34px;
+}
+
+.messages__chat {
+    background: #e0f5fe;
+    height: calc(100vh - 330px);
+    padding: 25px 5px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+}
+
+.form-control {
+    padding: 8px 14px;
+}

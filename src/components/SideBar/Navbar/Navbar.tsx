@@ -1,11 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
-type PropsType = {
-    
-}
-
-const Navbar: React.FC<PropsType> = () => (
+const Navbar: React.FC = () => (
     <nav className="navbar">
         <NavLink to="/" exact className="navbar__item">
             Dashboard
@@ -15,6 +11,9 @@ const Navbar: React.FC<PropsType> = () => (
         </NavLink>
         <NavLink to="/orders" className="navbar__item">
             Orders history
+        </NavLink>
+        <NavLink to="/messages" className="navbar__item">
+            Messages
         </NavLink>
     </nav>
 )
