@@ -1,13 +1,23 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
+//import { OrderType } from "../../redux/types/types";
+// import { useTypedSelector } from './../../hooks/useTypedSelector';
 import { useActions } from './../../hooks/useActions';
 
 const OrdersList: React.FC = () => {
     const { getOrders } = useActions();
+    //const [orders, setOrders] = useState<Array<OrderType> | null>(null);
+    //const {orders} = useTypedSelector((state) => state.orders);
+
+    // useEffect(() => {
+    //     console.log(orders);
+    // }, []);
 
     useEffect(() => {
-        getOrders();
-    }, [getOrders]);
+        const firstOrders = getOrders();
+        console.log(firstOrders);
+        
+        //setOrders(firstOrders);
+    }, []);
 
     return (
         <div className="orders content_wrapper">
