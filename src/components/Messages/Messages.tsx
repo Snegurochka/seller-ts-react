@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { UserType } from '../../redux/types/types';
-import Users from './Users/Users';
+import Users from './../Users/Users';
 
 import './messages.css';
 

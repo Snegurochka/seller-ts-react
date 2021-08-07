@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { UserType } from "../../../../redux/types/types";
+import { UserType } from './../../redux/types/types';
 
 type usersPropsType = {
     users: Array<UserType>
 }
 
-const UserSearch: React.FC<usersPropsType> = ({users}) => {
+const UserSearch: React.FC<usersPropsType> = ({ users }) => {
     const [name, setName] = useState('');
     const [user, setUser] = useState<UserType | undefined>();
 
@@ -22,11 +22,11 @@ const UserSearch: React.FC<usersPropsType> = ({users}) => {
 
     return (
         <div className="search">
-           <input type="text" name="userSearch" onChange={setNameHandler} value={name} />
-           <button onClick={searchNameHandler}>Search</button>
-           <div>
-               {user && user.name}
-           </div>
+            <input type="text" name="userSearch" onChange={setNameHandler} value={name} />
+            <button onClick={searchNameHandler}>Search</button>
+            <div>
+                {user && user.name}
+            </div>
         </div>
     );
 }

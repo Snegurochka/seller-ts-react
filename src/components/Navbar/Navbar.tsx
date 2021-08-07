@@ -9,6 +9,9 @@ const Navbar: React.FC = () => (
         <NavLink to="/profile" className="navbar__item">
             Seller Profile
         </NavLink>
+        <NavLink to="/products" className="navbar__item">
+            Seller Products
+        </NavLink>
         <NavLink to="/orders" className="navbar__item">
             Orders history
         </NavLink>
