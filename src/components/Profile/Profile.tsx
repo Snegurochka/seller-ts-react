@@ -1,6 +1,6 @@
 import './profile.css';
 
-import ProfileDescription from './ProfileDescription/ProfileDescription';
+import ProfileDescription from '../ProfileDescription/ProfileDescription';
 
 type PropsType = {
     description: string,
