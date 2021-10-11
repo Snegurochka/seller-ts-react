@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Layout from "../Layout/Layout";
 //import { OrderType } from "../../redux/types/types";
 // import { useTypedSelector } from './../../hooks/useTypedSelector';
 import { useActions } from './../../hooks/useActions';
@@ -20,8 +21,7 @@ const OrdersList: React.FC = () => {
     }, []);
 
     return (
-        <main className="orders content_wrapper">
-            <h3>Orders</h3>
+        <Layout header='Orders' classPage='orders'>
             <div className="ws_tbl ws-card">
                 <div className="ws_tbl__header">
                     <div>#Order</div>
@@ -36,7 +36,7 @@ const OrdersList: React.FC = () => {
                 </div>
             </div>
 
-        </main>
+        </Layout>
     )
 }
 

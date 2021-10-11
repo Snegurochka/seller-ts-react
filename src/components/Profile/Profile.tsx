@@ -1,6 +1,7 @@
 import './profile.css';
 
 import ProfileDescription from '../ProfileDescription/ProfileDescription';
+import Layout from '../Layout/Layout';
 
 type PropsType = {
     description: string,
@@ -8,7 +9,7 @@ type PropsType = {
 }
 
 const Profile: React.FC<PropsType> = ({ description, updateSellerDescription }) => (
-    <main className="profile">
+    <Layout header='Profile' classPage='profile'>
         seller description
         <div className="profile__cover">
             cover
@@ -24,7 +25,7 @@ const Profile: React.FC<PropsType> = ({ description, updateSellerDescription }) 
                 <ProfileDescription description = { description } updateSellerDescription = { updateSellerDescription } />
             </div>
         </div>
-    </main>
+    </Layout>
 )
 
 export default Profile;
