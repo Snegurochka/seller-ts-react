@@ -1,3 +1,42 @@
 .overview {
     width: 65%;
 }
+
+.item {
+    margin: 1rem;
+
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.itemLeft {
+    display    : flex;
+    align-items: center;
+}
+
+.itemLabel {
+    width        : 48px;
+    height       : 48px;
+    border-radius: 50%;
+
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.itemDetails {
+    margin-left: 1rem;
+}
+
+.itemTitle {
+    font-weight  : 500;
+}
+
+.itemTime {
+    opacity: 0.5;
+}
+
+.itemPrice {
+    font-weight: 600;
+}

@@ -1,9 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-//styles
-import './App.css';
-
 import { usersMoc } from './redux/moc/moc';
 
 //components
