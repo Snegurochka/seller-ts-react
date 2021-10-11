@@ -1,0 +1,50 @@
+.wrapp {
+    display              : grid;
+    grid-template-columns: 1fr 35%;
+}
+
+.item {
+    margin: 1rem;
+
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.itemLeft {
+    display    : flex;
+    align-items: center;
+}
+
+.itemLabel {
+    width        : 48px;
+    height       : 48px;
+    border-radius: 50%;
+
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.itemDetails {
+    margin-left: 1rem;
+}
+
+.itemTitle {
+    font-weight: 500;
+}
+
+.itemTime {
+    opacity: 0.5;
+}
+
+.itemPrice {
+    font-weight: 600;
+}
+
+.asideOverview {
+    background: var(--lightBlue);
+    margin: 2rem;
+    border-radius: 24px;
+    padding: 4rem 2rem;
+}

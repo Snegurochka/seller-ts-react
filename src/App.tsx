@@ -1,12 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-//styles
-import './App.css';
-
 import { usersMoc } from './redux/moc/moc';
 
 //components
+import Dashboard from './components/Dashboard/Dashboard';
 import LoginPage from './components/LoginPage/LoginPage';
 import SideBar from './components/SideBar/SideBar';
 import Profile from './components/Profile/Profile';
@@ -29,6 +27,7 @@ const App: React.FC = () => {
       <section className="App main_wrapper">
         <SideBar />
         <Suspense fallback={<span>Loading ...</span>}>
+          <Route path='/' exact component={Dashboard} />
           <Route path='/login' render={() => <LoginPage />} />
           <Route path='/profile' render={() => <Profile description='test descr' updateSellerDescription={updateSellerDescription} />} />
           <Route path='/products' render={() => <Products />} />

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { UserType } from '../../redux/types/types';
+import Layout from '../Layout/Layout';
 import Users from './../Users/Users';
 
 import './messages.css';
@@ -32,9 +33,7 @@ const Messages: React.FC<MsgPropsType> = (props) => {
     }
 
     return (
-        <div className="messages content_wrapper">
-            <h3>Messages</h3>
-            <div className="messages__body ws-card">
+        <Layout header='Messages' classPage='messages'>
                 <Users users={props.users} />
                 <div className="col">
                     <div className="messages__chat chat">
@@ -45,8 +44,7 @@ const Messages: React.FC<MsgPropsType> = (props) => {
                         <button type="submit" onClick={msgSendHandler} className="btn-msg-send btn">Send</button>
                     </div>
                 </div>
-            </div>
-        </div>
+        </Layout>
     )
 }
 

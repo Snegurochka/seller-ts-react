@@ -8,10 +8,10 @@ type PropsType = {
 }
 
 const SideBar: React.FC<PropsType> = () => (
-    <div className="sidebar">
+    <aside className="sidebar">
         <Login />
         <Navbar />
-    </div>
+    </aside>
 )
 
 export default SideBar;
