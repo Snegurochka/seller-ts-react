@@ -2,5 +2,6 @@
 
 Technologies used: 
 - React, React Hooks, Custom Hooks, 
-- Redux
-- TypeScript, JS,
+- Redux,
+- TypeScript, JS, 
+- Recharts - charting library built on React components

@@ -8,7 +8,7 @@ type PropsType = {
 }
 
 const Profile: React.FC<PropsType> = ({ description, updateSellerDescription }) => (
-    <div className="profile">
+    <main className="profile">
         seller description
         <div className="profile__cover">
             cover
@@ -24,7 +24,7 @@ const Profile: React.FC<PropsType> = ({ description, updateSellerDescription }) 
                 <ProfileDescription description = { description } updateSellerDescription = { updateSellerDescription } />
             </div>
         </div>
-    </div>
+    </main>
 )
 
 export default Profile;

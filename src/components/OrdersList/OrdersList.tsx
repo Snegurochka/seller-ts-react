@@ -20,7 +20,7 @@ const OrdersList: React.FC = () => {
     }, []);
 
     return (
-        <div className="orders content_wrapper">
+        <main className="orders content_wrapper">
             <h3>Orders</h3>
             <div className="ws_tbl ws-card">
                 <div className="ws_tbl__header">
@@ -36,7 +36,7 @@ const OrdersList: React.FC = () => {
                 </div>
             </div>
 
-        </div>
+        </main>
     )
 }
 

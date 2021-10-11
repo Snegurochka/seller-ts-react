@@ -32,7 +32,7 @@ const Messages: React.FC<MsgPropsType> = (props) => {
     }
 
     return (
-        <div className="messages content_wrapper">
+        <main className="messages content_wrapper">
             <h3>Messages</h3>
             <div className="messages__body ws-card">
                 <Users users={props.users} />
@@ -46,7 +46,7 @@ const Messages: React.FC<MsgPropsType> = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 
