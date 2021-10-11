@@ -33,9 +33,10 @@ code {
   --maxWidth: 1280px; 
   --white: #fff;
   --lightGrey: #dedede;
-  --darkGrey: #1c1c1c;
+  --lightBlue: #DBEAFE;
+  --darkGrey: #3f4d67;
   --primary: #80ceca;
-  --primary-hover: #40a6a0
+  --primary-hover: #40a6a0;
 }
 
 body {

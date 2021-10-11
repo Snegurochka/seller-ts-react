@@ -99,7 +99,7 @@ const Chart: React.FC = () => {
 
     return (
         <div className={styles.chart}>
-            <p className={styles.dataRange}>01-26 November, 2021</p>
+            <span className={styles.dataRange}>01-26 November, 2021</span>
 
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart width={150} height={40} data={data}>

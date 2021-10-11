@@ -3,7 +3,7 @@ import styles from './BlockOverview.module.scss';
 
 import optionIcon from "../../img/menuIcon.png";
 
-type PropsType = {
+interface PropsType {
     header: string,
 }
 
@@ -11,10 +11,9 @@ const BlockOverview: React.FC<PropsType> = ({ header, children }) => {
     return (
         <section className={styles.wrapper}>
             <header>
-                <p className={styles.title}>{header}</p>
+                <span className={styles.title}>{header}</span>
                 <button>
                     <img
-                        className={styles.option}
                         src={optionIcon}
                         alt="options"
                     />

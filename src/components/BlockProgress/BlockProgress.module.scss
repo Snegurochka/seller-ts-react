@@ -1,0 +1,32 @@
+.title {
+    font-size    : 20px;
+    font-weight  : 500;
+    margin-bottom: 3rem;
+}
+
+.label {
+    display        : flex;
+    justify-content: space-between;
+}
+
+
+.labelTitle {
+    font-weight: 500;
+}
+
+.bar {
+    height          : 5px;
+    width           : 100%;
+    background-color: #eceff5;
+    position        : relative;
+    border-radius   : 5px;
+    margin-bottom   : 2rem;
+    margin-top      : 1rem;
+}
+
+.coloredBar {
+    height          : 5px;
+    background-color: #31ba96;
+    position        : absolute;
+    border-radius   : 5px;
+}

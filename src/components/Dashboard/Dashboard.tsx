@@ -3,50 +3,56 @@ import styles from './Dashboard.module.scss';
 import cartIcon from '../../img/cartIcon.svg';
 
 // moc
-import { LastOrdersMoc } from './../../redux/moc/moc';
+import { LastOrdersMoc, salesMoc } from './../../redux/moc/moc';
 
 // Components
 import Layout from './../Layout/Layout';
 import Chart from './../Chart/Chart';
-import BlockOerview from '../BlockOverview/BlockOverview';
+import BlockOverview from '../BlockOverview/BlockOverview';
+import BlockProgress from '../BlockProgress/BlockProgress';
 
 
 
 const Dashboard: React.FC = () => {
     return (
-        <Layout header='Dashboard' classPage='dashboard'>
-            <div className={styles.overview}>
-                <Chart />
+        <div className={styles.wrapp}>
+            <Layout header='Dashboard' classPage='dashboard'>
+                <div className={styles.overview}>
+                    <Chart />
 
-                <BlockOerview header='Last orders'>
-                    <ul>
-                        {LastOrdersMoc.map((item) => (
-                            <li className={styles.item} key={item.id}>
-                                <div className={styles.itemLeft}>
-                                    <div
-                                        style={{ backgroundColor: '#80ceca' }}
-                                        className={styles.itemLabel}
-                                    >
-                                        <img src={cartIcon} alt={item.product} />
+                    <BlockOverview header='Last orders'>
+                        <ul>
+                            {LastOrdersMoc.map((item) => (
+                                <li className={styles.item} key={item.id}>
+                                    <div className={styles.itemLeft}>
+                                        <div
+                                            style={{ backgroundColor: '#80ceca' }}
+                                            className={styles.itemLabel}
+                                        >
+                                            <img src={cartIcon} alt={item.product} />
+                                        </div>
+                                        <div className={styles.itemDetails}>
+                                            <p className={styles.itemTitle}>
+                                                Product: {item.product}
+                                            </p>
+                                            <span className={styles.itemTime}>
+                                                {item.date} • {item.location}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className={styles.itemDetails}>
-                                        <p className={styles.itemTitle}>
-                                            Product: {item.product}
-                                        </p>
-                                        <p className={styles.itemTime}>
-                                            {item.date} • {item.location}
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className={styles.itemPrice}>
-                                    {item.price.toFixed(2)}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </BlockOerview>
-            </div>
-        </Layout>
+                                    <span className={styles.itemPrice}>
+                                        {item.price.toFixed(2)}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </BlockOverview>
+                </div>
+            </Layout>
+            <aside className={styles.asideOverview}>
+                <BlockProgress header='Sales' data={salesMoc} />
+            </aside>
+        </div>
     )
 }
 

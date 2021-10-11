@@ -54,3 +54,14 @@ export const LastOrdersMoc = [
         }
     },
 ]
+
+export const salesMoc = [
+    {
+        "label" : "Cushion for decor",
+        "value": 190,
+    },
+    {
+        "label" : "Demo product",
+        "value": 320,
+    },
+];

@@ -1,5 +1,6 @@
-.overview {
-    width: 65%;
+.wrapp {
+    display              : grid;
+    grid-template-columns: 1fr 35%;
 }
 
 .item {
@@ -30,7 +31,7 @@
 }
 
 .itemTitle {
-    font-weight  : 500;
+    font-weight: 500;
 }
 
 .itemTime {
@@ -39,4 +40,11 @@
 
 .itemPrice {
     font-weight: 600;
+}
+
+.asideOverview {
+    background: var(--lightBlue);
+    margin: 2rem;
+    border-radius: 24px;
+    padding: 4rem 2rem;
 }
